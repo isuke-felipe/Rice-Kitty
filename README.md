@@ -7,6 +7,16 @@ sudo pacman -S kitty
 sudo apt install kitty
 sudo dnf install kitty
 
+Abra o Kitty.
+
+Adicione as configuraćões de fonte e transparencia.
+
+cd ~/.config/kitty/
+
+Baixe a configuraćão 
+
+wget https://raw.githubusercontent.com/isuke-felipe/Rice-Kitty/refs/heads/main/kitty.conf
+
 Instale o FastFetch em sua distro/
 
 sudo pacman -S fastfetch
@@ -15,15 +25,25 @@ sudo dnf install fastfetch
 
 Após isso configure o FastFetch.
 
-Vá para o seu diretório .config → cd ~/.config
+Vá para o seu diretório .config 
 
-Se você não vir uma pasta fastfetch , crie uma → mkdir -p fastfetch
+cd ~/.config
 
-Gere a configuração padrão → fastfetch --gen-config
+Se você não vir uma pasta fastfetch , crie uma 
 
-Remova o arquivo de configuração padrão → rm fastfetch/config.jsonc
+mkdir -p fastfetch
 
-Baixe minha configuração atualizada → wget https://raw.githubusercontent.com/isuke-felipe/Rice-Kitty/refs/heads/main/config.jsonc
+Gere a configuração padrão
+
+fastfetch --gen-config
+
+Remova o arquivo de configuração padrão 
+
+rm fastfetch/config.jsonc
+
+Baixe minha configuração 
+
+wget https://raw.githubusercontent.com/isuke-felipe/Rice-Kitty/refs/heads/main/config.jsonc
 
 Feche seu terminal e abra-o novamente.
 
