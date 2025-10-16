@@ -23,9 +23,13 @@ Gere a configuração padrão → fastfetch --gen-config
 
 Remova o arquivo de configuração padrão → rm fastfetch/config.jsonc
 
-Baixe minha configuração atualizada → wget
+Baixe minha configuração atualizada → wget https://raw.githubusercontent.com/isuke-felipe/Rice-Kitty/refs/heads/main/config.jsonc
 
 Feche seu terminal e abra-o novamente.
+
+Abra o vonfig.jsonc e edite adicione o diretório da sua logo .PNG
+
+sudo nano nano ~/.config/kitty/kitty.conf
 
 Agora, execute → fastfetch
 
