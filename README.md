@@ -4,7 +4,7 @@ An Rice for Your Kitty
 ![AssemblyScript](https://img.shields.io/badge/assembly%20script-%23000000.svg?style=for-the-badge&logo=assemblyscript&logoColor=white)
 ![Status](https://img.shields.io/static/v1?label=STATUS&message=COMPLETO&color=green&style=for-the-badge)
 
-> Consiste em um repositório destinado a armazenar códigos e programas realizados na aula de Arquitetura de Computadores.
+> Consiste em um repositório destinado a .
 
 ## 💻 Pré-requisitos
 
@@ -104,8 +104,8 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 <table>
   <tr>
     <td align="center">
-      <a href="https://github.com/DebbieMatt" title="Autor">
-        <img src="https://avatars.githubusercontent.com/u/112919058?v=4" width="100px;" alt="Foto do Felipe"/><br>
+      <a href="https://github.com/isuke-felipe" title="Autor">
+        <img src="https://avatars.githubusercontent.com/u/111601155?v=4" width="100px;" alt="Foto do Felipe"/><br>
         <sub>
           <b>Felipe Iglesias</b>
     </td>
