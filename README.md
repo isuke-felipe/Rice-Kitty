@@ -118,5 +118,5 @@ Quer fazer parte desse projeto? Clique [AQUI](CONTRIBUTING.md) e leia como contr
 
 ## 📝 Licença
 
-Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
+Esse projeto está sob licença. Veja o arquivo [LICENÇA](https://github.com/isuke-felipe/Rice-Kitty/blob/18714b635e7c40013805f04fc64ad0fbb522cb09/LICENSE) para mais detalhes.
 
