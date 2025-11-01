@@ -24,10 +24,9 @@ Rice-Kitty é uma configuração personalizada (_rice_) para o emulador de termi
 
 > 💡 **Adicione aqui screenshots do seu terminal configurado!**
 
-```
 # Exemplo de visualização do FastFetch
-# (Adicione uma imagem aqui)
-```
+![Kitty](https://github.com/isuke-felipe/Rice-Kitty/blob/d34ff82d3aaac0b57b2bd764d04f72bd7a712855/Kitty.jpg)
+
 
 ## 💻 Pré-requisitos
 
