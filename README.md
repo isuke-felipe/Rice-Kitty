@@ -1,90 +1,123 @@
-# 🐱 Rice-Kitty
+# 🎨 Customize seu Terminal Linux
 
-<div align="center">
-
-**Uma configuração elegante e minimalista para o terminal Kitty com FastFetch**
-
-[Instalação](#-instalação) • [Configuração](#-configuração) • [Capturas de Tela](#-capturas-de-tela) • [Contribuir](#-contribuindo)
-
-</div>
+Um guia completo para transformar seu terminal em uma experiência visual moderna e produtiva.
 
 ---
 
-## 📋 Sobre o Projeto
+## 🖼️ Galeria de Personalizações
 
-Rice-Kitty é uma configuração personalizada (_rice_) para o emulador de terminal **Kitty**, combinado com **FastFetch** para criar uma experiência visual atraente e funcional. Este projeto oferece:
+Veja como seu terminal ficará após a configuração:
 
-- ✨ Transparência e efeitos visuais suaves
-- 🎨 Esquema de cores cuidadosamente selecionado
-- ⚡ Performance otimizada
-- 🖼️ Integração com FastFetch customizado
-- 🔤 Suporte a fontes personalizadas
+### Kitty Terminal
+![Kitty Rice](https://raw.githubusercontent.com/isuke-felipe/Rice-Kitty/main/screenshots/kitty-rice.png)
+*Terminal Kitty com tema personalizado, Oh My Posh e FastFetch*
 
-## 🖼️ Capturas de Tela
+### Ghostty Terminal
+![Ghostty Rice](https://raw.githubusercontent.com/isuke-felipe/Rice-Kitty/main/screenshots/ghostty-rice.png)
+*Terminal Ghostty com configuração moderna*
 
-> 💡 **Adicione aqui screenshots do seu terminal configurado!**
+### FastFetch em Ação
+![FastFetch Demo](https://raw.githubusercontent.com/isuke-felipe/Rice-Kitty/main/screenshots/fastfetch-demo.png)
+*Informações do sistema com logo personalizada*
 
-# Exemplo de visualização do FastFetch
-![Kitty](https://github.com/isuke-felipe/Rice-Kitty/blob/d34ff82d3aaac0b57b2bd764d04f72bd7a712855/Kitty.jpg)
+### Oh My Posh - Variações de Temas
+![Oh My Posh Themes](https://raw.githubusercontent.com/isuke-felipe/Rice-Kitty/main/screenshots/ohmyposh-themes.png)
+*Diferentes temas disponíveis para personalização*
 
+> **📌 Nota:** As capturas de tela mostram o resultado final. Seus resultados podem variar dependendo da fonte e tema do sistema.
+
+---
+
+## 📋 Índice
+
+- [Pré-requisitos](#-pré-requisitos)
+- [Instalação Rápida](#-instalação-rápida)
+- [Configuração Detalhada](#️-configuração-detalhada)
+- [Personalização](#-personalização)
+- [Solução de Problemas](#-solução-de-problemas)
+- [Contribuindo](#-contribuindo)
+
+---
 
 ## 💻 Pré-requisitos
 
 Antes de começar, certifique-se de ter:
 
-- 🐧 Sistema operacional Linux (qualquer distribuição)
-- 📦 Gerenciador de pacotes funcionando (`pacman`, `apt`, ou `dnf`)
-- 🔧 Git instalado
-- 📁 Acesso ao diretório `~/.config`
+- **Sistema Operacional:** Linux (testado em Arch, Manjaro, CachyOS, Debian, Ubuntu, Mint, Pop!_OS, Fedora)
+- **Gerenciador de Pacotes:** `pacman`, `apt` ou `dnf` funcionando
+- **Acesso:** Permissões para instalar pacotes e editar `~/.config`
+- **Terminais Compatíveis:** Ghostty, Kitty, Konsole
 
-## 🚀 Instalação
+---
 
-### 1️⃣ Clone o Repositório
+## 🚀 Instalação Rápida
 
-```bash
-git clone https://github.com/isuke-felipe/Rice-Kitty.git
-cd Rice-Kitty
-```
-
-### 2️⃣ Instale o Kitty
+### 1️⃣ Instale as Dependências Básicas
 
 Escolha o comando de acordo com sua distribuição:
 
-**Arch Linux / Manjaro:**
 ```bash
+# Arch Linux / Manjaro / CachyOS
+sudo pacman -S git wget unzip imagemagick
+
+# Debian / Ubuntu / Mint / Pop!_OS
+sudo apt install git wget unzip imagemagick
+
+# Fedora / RHEL
+sudo dnf install git wget unzip imagemagick
+```
+
+### 2️⃣ Instale o Terminal (escolha um)
+
+#### Kitty Terminal
+```bash
+# Arch Linux / Manjaro / CachyOS
 sudo pacman -S kitty
-```
 
-**Debian / Ubuntu:**
-```bash
+# Debian / Ubuntu / Mint / Pop!_OS
 sudo apt install kitty
+
+# Fedora / RHEL
+sudo dnf install kitty
 ```
 
-**Fedora / RHEL:**
+#### Ghostty Terminal
 ```bash
-sudo dnf install kitty
+# Arch Linux / Manjaro / CachyOS
+sudo pacman -S ghostty
+
+# Debian / Ubuntu / Mint / Pop!_OS
+sudo apt install ghostty
+
+# Fedora / RHEL
+sudo dnf install ghostty
 ```
 
 ### 3️⃣ Instale o FastFetch
 
-**Arch Linux / Manjaro:**
 ```bash
+# Arch Linux / Manjaro / CachyOS
 sudo pacman -S fastfetch
-```
 
-**Debian / Ubuntu:**
-```bash
+# Debian / Ubuntu / Mint / Pop!_OS
 sudo apt install fastfetch
-```
 
-**Fedora / RHEL:**
-```bash
+# Fedora / RHEL
 sudo dnf install fastfetch
 ```
 
-## ⚙️ Configuração
+### 4️⃣ Instale o Oh My Posh
 
-### Configurando o Kitty
+```bash
+sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
+sudo chmod +x /usr/local/bin/oh-my-posh
+```
+
+---
+
+## ⚙️ Configuração Detalhada
+
+### 🐱 Configurando o Kitty
 
 1. **Navegue até o diretório de configuração:**
 ```bash
@@ -101,112 +134,220 @@ mv kitty.conf kitty.conf.bak 2>/dev/null
 wget https://raw.githubusercontent.com/isuke-felipe/Rice-Kitty/refs/heads/main/kitty.conf
 ```
 
-### Configurando o FastFetch
+### 👻 Configurando o Ghostty
 
-1. **Acesse o diretório de configuração:**
+1. **Crie o diretório de configuração (se não existir):**
 ```bash
-cd ~/.config
+mkdir -p ~/.config/ghostty
 ```
 
-2. **Crie a pasta do FastFetch (se não existir):**
+2. **Remova a configuração anterior (se existir):**
 ```bash
-mkdir -p fastfetch
+rm -f ~/.config/ghostty/config
 ```
 
-3. **Gere a configuração padrão:**
+3. **Baixe a configuração personalizada:**
 ```bash
+cd ~/.config/ghostty
+wget https://raw.githubusercontent.com/isuke-felipe/Rice-Kitty/refs/heads/main/config
+```
+
+### ⚡ Configurando o FastFetch
+
+1. **Crie o diretório e gere a configuração padrão:**
+```bash
+mkdir -p ~/.config/fastfetch
+cd ~/.config/fastfetch
 fastfetch --gen-config
 ```
 
-4. **Substitua pela configuração personalizada:**
+2. **Substitua pela configuração personalizada:**
 ```bash
-cd fastfetch
-rm config.jsonc
+rm -f config.jsonc
 wget https://raw.githubusercontent.com/isuke-felipe/Rice-Kitty/refs/heads/main/config.jsonc
+wget https://raw.githubusercontent.com/isuke-felipe/Rice-Kitty/refs/heads/main/logo.png
 ```
 
-5. **Personalize a logo (opcional):**
+3. **Personalize a logo (opcional):**
 ```bash
 nano ~/.config/fastfetch/config.jsonc
 ```
-> Edite o caminho da imagem `logo.png` para o local da sua imagem personalizada.
+> Edite o caminho da imagem `logo.png` para apontar para sua imagem personalizada.
 
-### Ativando o FastFetch no Shell
+4. **Ative o FastFetch no seu shell:**
 
-Adicione o FastFetch ao arquivo de inicialização do seu shell:
-
-**Para Bash (~/.bashrc):**
 ```bash
-echo "fastfetch" >> ~/.bashrc
+# Para Bash
+echo 'fastfetch' >> ~/.bashrc
+
+# Para Zsh
+echo 'fastfetch' >> ~/.zshrc
+
+# Para Fish
+echo 'fastfetch' >> ~/.config/fish/config.fish
 ```
 
-**Para Zsh (~/.zshrc):**
+5. **Aplique as mudanças:**
 ```bash
-echo "fastfetch" >> ~/.zshrc
+# Para Bash/Zsh
+source ~/.bashrc  # ou source ~/.zshrc
+
+# Para Fish
+source ~/.config/fish/config.fish
 ```
 
-**Para Fish (~/.config/fish/config.fish):**
+### 🎨 Configurando o Oh My Posh
+
+1. **Adicione o Oh My Posh ao PATH:**
+
 ```bash
-echo "fastfetch" >> ~/.config/fish/config.fish
+# Para Bash
+echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.bash_profile
+
+# Para Zsh
+echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.zshenv
+
+# Para Fish
+echo 'set -gx PATH $PATH $HOME/.local/bin' >> ~/.config/fish/config.fish
 ```
 
-### 🎉 Finalizando
-
-Feche e reabra o terminal ou execute:
+2. **Baixe os temas:**
 ```bash
-source ~/.bashrc  # ou ~/.zshrc, dependendo do seu shell
+mkdir -p ~/.poshthemes
+cd ~/.poshthemes
+wget https://github.com/isuke-felipe/Rice-Kitty/raw/main/themes.zip
+unzip themes.zip
+chmod u+rw *.json
+rm themes.zip
 ```
+
+3. **Ative o tema no seu shell:**
+
+```bash
+# Para Bash
+echo 'eval "$(oh-my-posh init bash --config ~/.poshthemes/jandedobbeleer.omp.json)"' >> ~/.bashrc
+
+# Para Zsh
+echo 'eval "$(oh-my-posh init zsh --config ~/.poshthemes/jandedobbeleer.omp.json)"' >> ~/.zshrc
+
+# Para Fish
+echo 'oh-my-posh init fish --config ~/.poshthemes/jandedobbeleer.omp.json | source' >> ~/.config/fish/config.fish
+```
+
+4. **Recarregue o shell:**
+```bash
+# Bash/Zsh
+exec $SHELL
+
+# Ou simplesmente feche e reabra o terminal
+```
+
+---
 
 ## 🎨 Personalização
 
-### Modificando Cores e Transparência
+### Trocando o Tema do Oh My Posh
 
-Edite o arquivo de configuração do Kitty:
+1. **Explore os temas disponíveis:**
+   - Acesse: https://ohmyposh.dev/docs/themes
+   - Escolha seu tema favorito
+
+2. **Edite o arquivo de configuração do seu shell:**
+
 ```bash
-nano ~/.config/kitty/kitty.conf
+# Para Bash
+nano ~/.bashrc
+
+# Para Zsh
+nano ~/.zshrc
+
+# Para Fish
+nano ~/.config/fish/config.fish
 ```
 
-Principais configurações:
-- `background_opacity`: Ajusta a transparência (0.0 a 1.0)
-- `foreground`: Cor do texto
-- `background`: Cor de fundo
-- `cursor`: Cor do cursor
+3. **Altere a linha do oh-my-posh:**
 
-### Alterando Informações do FastFetch
-
-Edite o arquivo de configuração:
 ```bash
-nano ~/.config/fastfetch/config.jsonc
+# Sintaxe geral
+eval "$(oh-my-posh init [SHELL] --config ~/.poshthemes/[NOME_DO_TEMA].omp.json)"
+
+# Exemplo para Bash com tema "atomic"
+eval "$(oh-my-posh init bash --config ~/.poshthemes/atomic.omp.json)"
 ```
 
-Você pode customizar:
-- Módulos exibidos
-- Cores dos módulos
-- Logo/imagem
-- Layout das informações
+4. **Recarregue a configuração:**
+```bash
+source ~/.bashrc  # ou ~/.zshrc / ~/.config/fish/config.fish
+```
+
+### Personalizando o FastFetch
+
+Edite `~/.config/fastfetch/config.jsonc` para:
+- Mudar a logo
+- Adicionar/remover módulos de informação
+- Alterar cores e formatação
+
+---
+
+## 🔧 Solução de Problemas
+
+### FastFetch não aparece ao abrir o terminal
+```bash
+# Verifique se foi adicionado corretamente
+cat ~/.bashrc | grep fastfetch  # ou ~/.zshrc
+
+# Recarregue manualmente
+source ~/.bashrc
+```
+
+### Oh My Posh não funciona
+```bash
+# Verifique se está no PATH
+which oh-my-posh
+
+# Verifique permissões
+ls -l /usr/local/bin/oh-my-posh
+
+# Reinstale se necessário
+sudo chmod +x /usr/local/bin/oh-my-posh
+```
+
+### Caracteres estranhos aparecem no prompt
+- Instale uma **Nerd Font** (fontes com ícones):
+```bash
+# Arch
+sudo pacman -S ttf-nerd-fonts-symbols
+
+# Debian/Ubuntu
+sudo apt install fonts-nerd-font
+```
+
+---
 
 ## 📦 Estrutura do Projeto
 
 ```
 Rice-Kitty/
 ├── kitty.conf          # Configuração do terminal Kitty
+├── config              # Configuração do Ghostty
 ├── config.jsonc        # Configuração do FastFetch
-├── logo.png            # Logo personalizada (opcional)
-├── LICENSE             # Licença do projeto
-└── README.md           # Este arquivo
+├── logo.png            # Logo personalizada
+├── themes.zip          # Temas do Oh My Posh
+├── LICENSE             # Licença MIT
+└── README.md           # Documentação
 ```
+
+---
 
 ## 🤝 Contribuindo
 
 Contribuições são sempre bem-vindas! Para contribuir:
 
 1. 🍴 Faça um fork do projeto
-2. 🌿 Crie uma branch para sua feature (`git checkout -b feature/MinhaFeature`)
-3. 💾 Commit suas mudanças (`git commit -m 'Adiciona MinhaFeature'`)
-4. 📤 Push para a branch (`git push origin feature/MinhaFeature`)
+2. 🌿 Crie uma branch: `git checkout -b feature/MinhaFeature`
+3. 💾 Commit suas mudanças: `git commit -m 'Adiciona MinhaFeature'`
+4. 📤 Push para a branch: `git push origin feature/MinhaFeature`
 5. 🔃 Abra um Pull Request
-
-Veja nosso guia completo em [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ### 📝 Diretrizes de Contribuição
 
@@ -214,51 +355,52 @@ Veja nosso guia completo em [CONTRIBUTING.md](CONTRIBUTING.md)
 - Teste suas alterações em diferentes distribuições Linux
 - Documente novas features ou mudanças
 - Atualize o README se necessário
+- Adicione screenshots quando relevante
+
+---
 
 ## 👥 Autor
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/isuke-felipe" title="Autor">
-        <img src="https://avatars.githubusercontent.com/u/111601155?v=4" width="100px;" alt="Foto do Felipe"/><br>
-        <sub>
-          <b>Felipe Iglesias</b>
-        </sub>
-      </a>
-    </td>
-  </tr>
-</table>
+**Felipe Iglesias**  
+GitHub: [@isuke-felipe](https://github.com/isuke-felipe)
+
+---
 
 ## ⭐ Agradecimentos
 
-- Comunidade [Kitty Terminal](https://sw.kovidgoyal.net/kitty/)
-- Projeto [FastFetch](https://github.com/fastfetch-cli/fastfetch)
-- Comunidade r/unixporn por inspiração
+- [Kitty Terminal](https://sw.kovidgoyal.net/kitty/)
+- [Ghostty Terminal](https://ghostty.org/)
+- [FastFetch](https://github.com/fastfetch-cli/fastfetch)
+- [Oh My Posh](https://ohmyposh.dev/)
+- Comunidade [r/unixporn](https://reddit.com/r/unixporn) por inspiração
+
+---
 
 ## 🐛 Reportando Problemas
 
-Encontrou um bug? Tem uma sugestão? 
+Encontrou um bug? Tem uma sugestão?
 
 1. Verifique se já não existe uma [issue aberta](https://github.com/isuke-felipe/Rice-Kitty/issues)
-2. Crie uma nova issue com:
-   - Descrição clara do problema
-   - Passos para reproduzir
-   - Screenshots (se aplicável)
-   - Informações do sistema (distro, versão do Kitty, etc.)
+2. Crie uma nova issue incluindo:
+   - ✅ Descrição clara do problema
+   - 📋 Passos para reproduzir
+   - 📸 Screenshots (se aplicável)
+   - 💻 Informações do sistema (distro, versão do terminal, shell)
+
+---
 
 ## 📜 Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+## 🌟 Gostou?
+
+Se este projeto foi útil para você, considere dar uma ⭐ no repositório!
 
 ---
 
 <div align="center">
-
-**Feito com ❤️ para a comunidade Linux**
-
-Se este projeto te ajudou, considere dar uma ⭐!
-
-[⬆ Voltar ao topo](#-rice-kitty)
-
+Feito com ❤️ por Felipe Iglesias
 </div>
