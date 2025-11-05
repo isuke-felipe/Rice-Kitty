@@ -395,7 +395,7 @@ Encontrou um bug? Tem uma sugestão?
 
 ## 📜 Licença
 
-Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto está sob a licença **GLP-3.0**. Veja o arquivo [LICENSE](https://github.com/isuke-felipe/Rice-Kitty/tree/main?tab=GPL-3.0-1-ov-file) para mais detalhes.
 
 ---
 
