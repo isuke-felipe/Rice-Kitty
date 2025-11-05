@@ -9,11 +9,15 @@ Um guia completo para transformar seu terminal em uma experiência visual modern
 Veja como seu terminal ficará após a configuração:
 
 ### Kitty Terminal
-![Kitty Rice](https://raw.githubusercontent.com/isuke-felipe/Rice-Kitty/main/screenshots/kitty-rice.png)
+![Kitty Rice](https://github.com/isuke-felipe/Rice-Kitty/blob/1fb99f0298544ff86ce5f4fb49345fb3a70f22c7/kitty-sample.png)
 *Terminal Kitty com tema personalizado, Oh My Posh e FastFetch*
 
 ### Ghostty Terminal
-![Ghostty Rice](https://raw.githubusercontent.com/isuke-felipe/Rice-Kitty/main/screenshots/ghostty-rice.png)
+![Ghostty Rice](https://github.com/isuke-felipe/Rice-Kitty/blob/1fb99f0298544ff86ce5f4fb49345fb3a70f22c7/ghostty-sample.png)
+*Terminal Ghostty com configuração moderna*
+
+### Konsole Terminal
+![Konsole Terminal](https://github.com/isuke-felipe/Rice-Kitty/blob/1fb99f0298544ff86ce5f4fb49345fb3a70f22c7/konsole-sample.png)
 *Terminal Ghostty com configuração moderna*
 
 ### FastFetch em Ação
