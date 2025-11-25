@@ -229,7 +229,7 @@ rm themes.zip
 
 ```bash
 # Para Bash
-eval "$(oh-my-posh init bash --config ~/.poshthemes/jandedobbeleer.omp.json)
+eval "$(oh-my-posh init bash --config ~/.poshthemes/jandedobbeleer.omp.json)"
 
 # Para Zsh
 eval "$(oh-my-posh init zsh --config ~/.poshthemes/jandedobbeleer.omp.json)"
