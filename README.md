@@ -229,10 +229,10 @@ rm themes.zip
 
 ```bash
 # Para Bash
-echo 'eval "$(oh-my-posh init bash --config ~/.poshthemes/jandedobbeleer.omp.json)"' >> ~/.bashrc
+eval "$(oh-my-posh init bash --config ~/.poshthemes/jandedobbeleer.omp.json)
 
 # Para Zsh
-echo 'eval "$(oh-my-posh init zsh --config ~/.poshthemes/jandedobbeleer.omp.json)"' >> ~/.zshrc
+eval "$(oh-my-posh init zsh --config ~/.poshthemes/jandedobbeleer.omp.json)"
 
 # Para Fish
 echo 'oh-my-posh init fish --config ~/.poshthemes/jandedobbeleer.omp.json | source' >> ~/.config/fish/config.fish
@@ -260,13 +260,13 @@ exec $SHELL
 
 ```bash
 # Para Bash
-nano ~/.bashrc
+sudo nano ~/.bashrc
 
 # Para Zsh
-nano ~/.zshrc
+sudo nano ~/.zshrc
 
 # Para Fish
-nano ~/.config/fish/config.fish
+sudo nano ~/.config/fish/config.fish
 ```
 
 3. **Altere a linha do oh-my-posh:**
