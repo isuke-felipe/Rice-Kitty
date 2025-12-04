@@ -406,5 +406,5 @@ Se este projeto foi útil para você, considere dar uma ⭐ no repositório!
 ---
 
 <div align="center">
-Feito com ❤️ por Felipe Iglesias
+
 </div>
